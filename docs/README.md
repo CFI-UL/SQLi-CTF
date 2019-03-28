@@ -171,7 +171,7 @@ WHERE username = 'filedesless' AND password = 'hunter2';
 
 --
 
-what if someone puts a single quote (') in there?
+what if someone puts a squiggly boi (') in there?
 
 --
 
@@ -184,15 +184,17 @@ WHERE username = ''' AND password = 'hunter2';
 
 ---
 
-```SQL
-SELECT * FROM users
-WHERE username = '' or 1 = 1 -- ' AND password = '';
-```
-
+.responsive[![squiggly boi](https://i.imgur.com/LtQWQXm.jpg)]
 
 ---
 
 # 💣 How to exploit?
+
+
+```SQL
+SELECT * FROM users
+WHERE username = '' or 1 = 1 -- ' AND password = '';
+```
 
 ---
 
