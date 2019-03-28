@@ -51,7 +51,7 @@ services:
       - MYSQL_USER=ctfd
       - MYSQL_PASSWORD=ctfd
     volumes:
-      - .data/mysql:/var/lib/mysql
+      - ./CTFd/.data/mysql:/var/lib/mysql
     networks:
         internal:
     # This command is required to set important mariadb defaults
@@ -61,7 +61,7 @@ services:
     image: redis:4
     restart: always
     volumes:
-    - .data/redis:/data
+    - ./CTFd/.data/redis:/data
     networks:
         internal:
 
