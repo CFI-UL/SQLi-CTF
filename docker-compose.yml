@@ -13,8 +13,6 @@ services:
 
   web:
     build: ./www/
-    ports:
-     - "12000:80"
     volumes:
       - ./www/src:/var/www/html
     links:
@@ -23,8 +21,6 @@ services:
   ctfd:
     build: ./CTFd/
     restart: always
-    ports:
-      - "8000:8000"
     environment:
       - UPLOAD_FOLDER=/var/uploads
       - DATABASE_URL=mysql+pymysql://root:ctfd@db/ctfd
@@ -64,6 +60,12 @@ services:
     - ./CTFd/.data/redis:/data
     networks:
         internal:
+
+  reverseproxy:
+    build: ./nginx/
+    restart: always
+    ports:
+      - 8000:8000
 
 networks:
     default:
