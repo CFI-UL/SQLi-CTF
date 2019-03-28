@@ -8,7 +8,7 @@ error_reporting(0);
 
 
 if (isset($_GET['q'])) {
-	// Ban space character
+	// Ban quotes
 	if (strpos($_GET['q'], "'") !== false) die("Hacker detected"); 
 	if (strpos($_GET['q'], '"') !== false) die("Hacker detected"); 
 }
