@@ -128,6 +128,10 @@ SELECT username, email FROM users WHERE userid = 3;
 +-------------+-------------------------+
 ```
 
+???
+
+UNION requires the same amount of column in both select
+
 --
 
 ```SQL
