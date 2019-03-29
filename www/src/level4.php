@@ -24,7 +24,7 @@ if (isset($_GET['q'])) {
 <html>
  <head>
   <title>Gogol Search</title>
- <link rel="stylesheet" href="http://www.goglogo.com/include/goglogo.css" type="text/css" />
+ <link rel="stylesheet" href="css/goglogo.css" type="text/css" />
   </head>
 
  <body style="margin:0;padding:0;">
@@ -32,7 +32,7 @@ if (isset($_GET['q'])) {
     <br/><br/><br/><br/>
     <div class="content-area">
         <div class="logo">
-	<img src="http://funnylogo.info/logo/Google/White/Gogol.aspx">
+	<img src="img/Gogol.jpg">
         </div>
         <div class="searchBox">
             <table cellspacing="0" cellpadding="0" border="0">

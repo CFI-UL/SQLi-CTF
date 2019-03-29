@@ -28,7 +28,7 @@ if (isset($_POST['session_id'])) {
 <!DOCTYPE HTML>
 <html>
 <head>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
         <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
@@ -110,11 +110,11 @@ if (isset($_POST['session_id'])) {
         </div>
 
 	<script
-              src="https://code.jquery.com/jquery-3.1.1.min.js"
+              src="js/jquery-3.1.1.min.js"
               integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
               crossorigin="anonymous"></script>
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
 
 </body>
