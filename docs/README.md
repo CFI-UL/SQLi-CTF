@@ -1,7 +1,7 @@
 class: middle
 
 .center.responsive[
-![Logo](https://imgur.com/JR7UeOu.jpg)]
+![Logo](https://i.imgur.com/EtM13qY.png)]
 
 ---
 
