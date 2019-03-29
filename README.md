@@ -18,4 +18,4 @@ The CTFd and challenges will be available at http://127.0.0.1:8000
 
 Now reverse proxy it behind a letsencrypt enabled nginx/apache (this is left as an exercise to the reader)
 
-Default creds are `admin:admin`, don't forget them
+Default creds are `admin:admin`, don't forget to change them
