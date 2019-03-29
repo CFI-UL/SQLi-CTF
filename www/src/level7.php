@@ -38,7 +38,7 @@
 		<script>
 			var spawn_motivation = function() {
 				var id = Math.floor(Math.random() * 6);
-				document.location = document.location.origin + "/level7.php?id=" + id;
+				document.location.assign("?id=" + id);
 			}
 		</script>
 	</body>

@@ -24,8 +24,8 @@
                 Help me find all of my friend's secrets.
               </div>
               <div class="panel-footer">
-    <a href="/level1.php" target="_blank" class="btn btn-success">Start here</a>
-    <a href="/level1.php?source" target="_blank" class="btn btn-primary">Source code</a>
+    <a href="level1.php" target="_blank" class="btn btn-success">Start here</a>
+    <a href="level1.php?source" target="_blank" class="btn btn-primary">Source code</a>
 
     </div>
             </div>
@@ -44,8 +44,8 @@
     <strong>Note</strong>: There are <u>two</u> flags in this challenge.
               </div>
               <div class="panel-footer">
-    <a href="/level2.php" target="_blank" class="btn btn-warning">Start here</a>
-    <a href="/level2.php?source" target="_blank" class="btn btn-primary">Source code</a>
+    <a href="level2.php" target="_blank" class="btn btn-warning">Start here</a>
+    <a href="level2.php?source" target="_blank" class="btn btn-primary">Source code</a>
     </div>
             </div>
         </div>
@@ -61,8 +61,8 @@
                 find a new bug and make some money out of it...
               </div>
          <div class="panel-footer">
-    <a href="/level3.php" target="_blank" class="btn btn-warning">Start here</a>
-    <a href="/level3.php?source" target="_blank" class="btn btn-primary">Source code</a>
+    <a href="level3.php" target="_blank" class="btn btn-warning">Start here</a>
+    <a href="level3.php?source" target="_blank" class="btn btn-primary">Source code</a>
     </div>
             </div>
         </div>
@@ -77,8 +77,8 @@
                 Seems like our previous bug has been patched now... Let's double check that they did their job properly.
               </div>
        <div class="panel-footer">
-    <a href="/level4.php" target="_blank" class="btn btn-warning">Start here</a>
-    <a href="/level4.php?source" target="_blank" class="btn btn-primary">Source code</a>
+    <a href="level4.php" target="_blank" class="btn btn-warning">Start here</a>
+    <a href="level4.php?source" target="_blank" class="btn btn-primary">Source code</a>
     </div>
 
             </div>
@@ -95,8 +95,8 @@
                 I hope they are right this time...
               </div>
        <div class="panel-footer">
-    <a href="/level5.php" target="_blank" class="btn btn-warning">Start here</a>
-    <a href="/level5.php?source" target="_blank" class="btn btn-primary">Source code</a>
+    <a href="level5.php" target="_blank" class="btn btn-warning">Start here</a>
+    <a href="level5.php?source" target="_blank" class="btn btn-primary">Source code</a>
     </div>
 
             </div>
@@ -116,8 +116,8 @@
                 Let's prove them wrong.
               </div>
        <div class="panel-footer">
-    <a href="/level6.php" target="_blank" class="btn btn-danger">Start here</a>
-    <a href="/level6.php?source" target="_blank" class="btn btn-primary">Source code</a>
+    <a href="level6.php" target="_blank" class="btn btn-danger">Start here</a>
+    <a href="level6.php?source" target="_blank" class="btn btn-primary">Source code</a>
     </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                 My teacher has this weird website. I doubt there's any useful information
                 in the database. Maybe we can leak the /etc/passwd file instead?
               </div>
-              <div class="panel-footer"><a href="/level7.php" target="_blank" class="btn btn-danger">Start here</a></div>
+              <div class="panel-footer"><a href="level7.php" target="_blank" class="btn btn-danger">Start here</a></div>
             </div>
         </div>
   <script

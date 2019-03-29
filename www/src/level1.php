@@ -54,7 +54,7 @@ if (isset($_POST['session_id'])) {
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-4">
-				<form method="POST" action="/level1.php">
+				<form method="POST" action="level1.php">
 					<div class="input-group">
 					  <input type="text" name="session_id" class="form-control" placeholder="Your session ID" aria-describedby="basic-addon2">
 					  <span class="input-group-btn">
@@ -64,7 +64,7 @@ if (isset($_POST['session_id'])) {
 				</form>
 			</div>
 			<div class="col-md-4">
-				<form method="POST" action="/level1.php">
+				<form method="POST" action="level1.php">
 
 					<div class="input-group">
 					  <input type="text" name="secret" class="form-control" placeholder="Your secret" aria-describedby="basic-addon2">
